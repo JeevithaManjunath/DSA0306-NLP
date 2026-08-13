@@ -1,0 +1,78 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JeevithaManjunath/DSA0306-NLP/blob/main/experiment%2019\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import nltk\n",
+        "from nltk.wsd import lesk\n",
+        "from nltk.corpus import wordnet\n",
+        "nltk.download('wordnet')\n",
+        "nltk.download('omw-1.4')\n",
+        "sentence=\"I went to the bank to deposit money\"\n",
+        "words=sentence.split()\n",
+        "result=lesk(words,\"bank\")\n",
+        "print(\"sentence\",sentence)\n",
+        "print(\"Ambigous word: bank\")\n",
+        "if result:\n",
+        "  print(\"selected sense\",result.name())\n",
+        "  print(\"definition:\",result.definition())\n",
+        "else:\n",
+        "  print(\"no sense found\")"
+      ],
+      "metadata": {
+        "id": "rL4pJ3N_kDJX",
+        "outputId": "433791ef-ec39-4182-8cca-0def864f063a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sentence I went to the bank to deposit money\n",
+            "Ambigous word: bank\n",
+            "selected sense savings_bank.n.02\n",
+            "definition: a container (usually with a slot in the top) for keeping money at home\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "[nltk_data] Downloading package wordnet to /root/nltk_data...\n",
+            "[nltk_data]   Package wordnet is already up-to-date!\n",
+            "[nltk_data] Downloading package omw-1.4 to /root/nltk_data...\n",
+            "[nltk_data]   Package omw-1.4 is already up-to-date!\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
