@@ -1,0 +1,99 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "\n",
+        "client = genai.Client(api_key=\"AQ.Ab8RN6LpWxeXTb8bSPXHx1C8xTdJjxdBgUOXBRW_p5-GD7XLdg\")\n",
+        "\n",
+        "prompt = input(\"Enter a text: \")\n",
+        "\n",
+        "response = client.models.generate_content(\n",
+        "    model=\"gemini-3.5-flash-lite\",\n",
+        "    contents=prompt\n",
+        ")\n",
+        "\n",
+        "print(response.text)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UitIEBg1N2iq",
+        "outputId": "86800d7d-510a-48f6-a778-3315c55ca6db"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a text: Tell me about sankranthi\\\n",
+            "**Sankranthi** (also known as **Makar Sankranti**) is one of the most vibrant, auspicious, and widely celebrated harvest festivals in India. Unlike most other Hindu festivals that follow the lunar calendar, Sankranthi is based on the solar calendar. It usually falls on **January 14th or 15th** every year.\n",
+            "\n",
+            "Here is a detailed look at what makes Sankranthi so special:\n",
+            "\n",
+            "### 1. The Significance and Name\n",
+            "* **The Sun’s Transition:** The word *Sankranti* means \"movement\" or \"transition.\" The festival marks the transition of the Sun from the zodiac sign of Sagittarius (*Dhanu*) into Capricorn (*Makara*). \n",
+            "* **End of Inauspicious Period:** It marks the end of *Dhanurmasam* (the winter solstice) and the beginning of **Uttarayana**—the northward movement of the sun. In Hindu mythology, Uttarayana is considered the \"day of the devas\" (gods), making it an auspicious time for new beginnings and spiritual growth.\n",
+            "* **Harvest Festival:** It is a time to thank the Sun God, nature, and farm animals for a bountiful harvest. \n",
+            "\n",
+            "### 2. A Four-Day Celebration (Especially in Andhra Pradesh and Telangana)\n",
+            "While North India celebrates it primarily for one day, in South India (especially Andhra Pradesh and Telangana), it is a grand **four-day festival**:\n",
+            "\n",
+            "* **Day 1: Bhogi:** People discard old and unwanted household items and light a bonfire (*Bhogi Mantalu*) at dawn, symbolizing the destruction of negativity, old habits, and the welcoming of new beginnings.\n",
+            "* **Day 2: Pedda Panduga (Makar Sankranti):** The main festival day. People wear new clothes, offer prayers to the Sun God and ancestors, and prepare a feast of traditional sweets.\n",
+            "* **Day 3: Kanuma:** A day dedicated to thanking cattle (cows and bulls), as they play a crucial role in agriculture. Cattle are bathed, decorated with bells and turmeric, and worshipped.\n",
+            "* **Day 4: Mukkanuma:** A day dedicated to nature and non-vegetarian feasts, celebrated with community gatherings and rural sports.\n",
+            "\n",
+            "### 3. Cultural Traditions & Festivities\n",
+            "* **Kite Flying:** This is one of the most iconic sights of Sankranthi. The skies are filled with colorful kites of all shapes and sizes, especially in Gujarat, Maharashtra, and parts of South India.\n",
+            "* **Rangoli (Muggulu):** In front of every home, women create elaborate, colorful geometric patterns using rice flour, chalk, and flower petals, often topped with a ball of cow dung adorned with marigold flowers (*Gummadi Poo*).\n",
+            "* **Haridasu and Basavanna:** Dressed in traditional attire, wandering minstrels (*Haridasu*) sing hymns in praise of Lord Vishnu, while beautifully decorated bulls (*Basavanna*) visit door-to-door, performing tricks while people give them alms.\n",
+            "* **Cockfights and Rural Sports:** In parts of Andhra Pradesh, traditional rural sports and sanctioned events take place during these days.\n",
+            "\n",
+            "### 4. Traditional Foods\n",
+            "Food is a central part of Sankranthi, reflecting the harvest of newly reaped grains, sugarcane, and sesame seeds.\n",
+            "* **Sesame and Jaggery:** Treats made of sesame (*til*) and jaggery (*gur*)—like *til ke laddu* and *chikki*—are consumed across India. In Maharashtra, people exchange these sweets saying, *\"Til gul ghya, god god bola\"* (Eat this sesame-jaggery and speak sweet words).\n",
+            "* **Chakkara Pongal / Sweet Pongal:** A dish made of newly harvested rice, moong dal, jaggery, ghee, and dry fruits, offered as *prasadam* to the gods.\n",
+            "* **Ariselu:** A traditional, rich sweet made of rice flour and jaggery, deep-fried in ghee.\n",
+            "\n",
+            "### Regional Names\n",
+            "Sankranthi is celebrated across India with different names and distinct local traditions:\n",
+            "* **Tamil Nadu:** Pongal\n",
+            "* **Assam:** Magh Bihu / Bhogali Bihu\n",
+            "* **Punjab/Haryana:** Lohri (celebrated a day prior)\n",
+            "* **Gujarat/Rajasthan:** Uttarayan (Kite flying festival)\n",
+            "* **Karnataka, Andhra Pradesh, Telangana, Maharashtra, Goa:** Makar Sankranti\n",
+            "\n",
+            "In essence, Sankranthi is a joyous celebration of life, nature, gratitude, and community, bridging the transition from cold winter days to longer, warmer days of spring.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "tZwk-YSQOH-p"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
